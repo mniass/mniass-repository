@@ -6,3 +6,10 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+
+execute 'update-upgrade' do
+  command "apt-get update && apt-get upgrade -y"
+	action : run
+end
+
+include_recipe "mniass-repository::syslog-ng"
